@@ -1,4 +1,5 @@
 import { BASE_URL } from "../config";
+//const BASE_URL = "http://localhost:4000/"
 
 const signup = async (user) => {
   try {
