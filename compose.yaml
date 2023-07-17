@@ -1,0 +1,17 @@
+---
+services:
+  frontend:
+    image: client:latest
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_BASE_URL="http://192.168.19.151:4000/"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: api:latest
+    ports:
+      - 4000:4000
+    environment:
+      - MONGO_URI="mongodb+srv://subham68:bapun123@cluster0.ewhijcs.mongodb.net/?retryWrites=true&w=majority"
